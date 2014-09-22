@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Start Page</title>
+<meta name="description" content="A welcoming start page for your browser">
+<meta name="viewport" content="initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div id="bg"></div>
+    <div id="imagecopyright"><a id="imagelink" href="#"></a></div>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="row searchcontainer content-block">
+                <form action="https://www.google.com/search" method="GET">
+                    <input type="text" name="q" class="searchbox" tabindex="0" placeholder="Google Search">
+                </form>
+            </div>
+            <div class="row">
+                
+            </div>            
+        </div>
+    </div>
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.waitforimages.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+    //Load image a day JSON
+    $.ajax({
+        url:"http://image-a-day.herokuapp.com/image",
+        dataType: 'json',
+        success:function(json){
+            //Set image copyright
+            $("#imagelink").html(json.copyright);
+            $("#imagelink").attr('href', json.copyrightLink);
+            
+            //Set background image
+            $("#bg").css("background-image", "url('"+json.imageUrl+"')").waitForImages(function() {
+                //Wait until load then fade in copyright + background
+                $("#bg").fadeIn(1000);
+                $("#imagecopyright").slideToggle(1000);
+            }, $.noop, true);
+        },  
+    });
+});
+</script>
+</body>
+</html>

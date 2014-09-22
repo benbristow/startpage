@@ -1,0 +1,80 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding-top:75px;
+    background-color:#000000 !important;
+}
+
+#bg {
+    position:absolute;
+    min-width:100%;
+    min-height:100%;
+    top:0;
+    left:0;
+    display:none;
+    
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;       
+}
+
+#imagecopyright {
+    position:absolute;
+    bottom:0;
+    left:0;
+    min-width:100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    color:#FFFFFF;
+    padding:5px;
+    font-size:12px;
+    text-align:center;
+    display: none;
+}
+
+#imagecopyright a {
+    color:#FFFFFF !important;
+}
+
+#imagecopyright a:hover {
+    color:#CCCCCC !important;
+    text-decoration: none;
+}
+
+/* Display Blocks */
+.content-block {
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin-bottom:15px;
+    color:#FFFFFF;
+    padding:10px;
+    font-size:16pt;
+}
+
+.content-block h3 {
+    font-weight:700;  
+    font-size:24pt;
+}
+
+/*Search */
+.searchcontainer {
+    min-width:100%;
+    min-height:20px;
+    padding:20px !important;
+}
+
+.searchcontainer .searchbox {
+    min-height:48px;
+    width:100%;
+    padding:5px;
+    font-size:32px;
+    font-weight:lighter;
+    border:none;
+    background-color:rgba(0, 0, 0, 0);
+    outline:none;
+}
