@@ -7,7 +7,7 @@ Demo
 ------
 Using the power of GitHub pages you can demo the page right now!
 
-http://benbristow.github.io/startpage/
+https://benbristow.github.io/startpage/
 
 Acknowledgements
 ----------
