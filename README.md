@@ -3,6 +3,12 @@ Startpage
 
 A sexy looking new tab/start page. Uses the Bing Image Of The Day.
 
+Demo
+------
+Using the power of GitHub pages you can demo the page right now!
+
+http://benbristow.github.io/startpage/
+
 Acknowledgements
 ----------
 * Twitter Bootstrap - http://getbootstrap.com/
